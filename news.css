@@ -58,8 +58,7 @@ body{
     grid-template-columns: 1fr 1fr;
     gap:30px;
     margin-top:70px;
-
-   
+    margin-inline:auto;
 }
 .images-grille1{
     display: flex;

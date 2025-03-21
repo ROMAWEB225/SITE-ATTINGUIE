@@ -402,26 +402,26 @@ body{
     width: 100%; /* Prend toute la largeur de la page */
     /* overflow: hidden; /* Cache les diapositives en dehors du conteneur */
     /* position: relative;
-} */ */
+} */ 
 
 /* Conteneur des diapositives */
 /* .slides {
     display: flex;
     transition: transform 3s ease-in-out; /* Animation de transition */
-/* } */ */
+/* } */ 
 
 /* Chaque diapositive */
 /* .slide {
     min-width: 100%; /* Chaque diapositive prend toute la largeur du conteneur */
     /* flex-shrink: 0; /* Empêche la réduction de la largeur */
-/* } */ */ */
+/* } */ 
 
 /* Images dans les diapositives */
 /* .slide img {
     width: 100%;
     display: block;
 } */
- */
+ 
 
 
 
