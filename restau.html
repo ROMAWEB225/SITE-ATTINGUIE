@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="restau.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="nav-gle">
+    
+          <div class="nav-logo">
+            <img src="IMAGES PISCINE/logo.jpg" alt="logo site">
+          </div>
+    
+          <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
+    
+          <div class="nav-content">
+          <ul class="nav-liens">
+            <li><a href="index.html" class="index">Accueil</a></li>
+            <li><a href="la piscine.html"> La piscine</a></li>
+            <li><a href="activités.html">Activités</a></li>
+            <li><a href="restau.html" class="restau">Restaurant</a></li>
+            <li><a href="reser.html">Réservation</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+     
+          <div class="nav-recherche">
+            <input type="text" placeholder="Rechercher...">
+            <button type="submit">🔍</button>
+          </div>
+        </div>  
+        </header>
+        
+        <main>
+          <section class="restaurant-hero">
+            <div class="hero-content">
+                <h1>Le Bistro Aquatique</h1>
+                <p>Saveurs locales et internationales face aux piscines</p>
+            </div>
+        </section>
+    
+        <div class="container">
+            <!-- Section Concept -->
+            <h2 class="section-title">Notre Concept Culinaire</h2>
+            <div class="concept-grid">
+                <div class="concept-card">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1046/1046857.png" alt="Healthy">
+                    <h3>Produits Frais</h3>
+                    <p>Poissons du jour, fruits et légumes locaux sélectionnés avec soin</p>
+                </div>
+                
+                <div class="concept-card">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png" alt="Rapide">
+                    <h3>Service Rapide</h3>
+                    <p>Options express pour les baigneurs pressés</p>
+                </div>
+                
+                <div class="concept-card">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1138/1138043.png" alt="Enfants">
+                    <h3>Menu Enfant</h3>
+                    <p>Spécialités ludiques et équilibrées pour les petits</p>
+                </div>
+            </div>
+    
+            <!-- Menu Section -->
+            <h2 class="section-title">Nos Menus</h2>
+            <div class="menu-tabs">
+                <button class="tab-btn active" onclick="openMenu('enfant')">Enfants</button>
+                <button class="tab-btn" onclick="openMenu('adulte')">Adultes</button>
+                <button class="tab-btn" onclick="openMenu('snack')">Snacks</button>
+                <button class="tab-btn" onclick="openMenu('boisson')">Boissons</button>
+            </div>
+            
+            <div id="enfant" class="menu-content active">
+                <div class="menu-item">
+                    <h4>Menu Petit Poisson <span>8€</span></h4>
+                    <p>Nuggets maison + frites + boisson + glace</p>
+                </div>
+                
+                <div class="menu-item">
+                    <h4>Box Dauphin <span>7€</span></h4>
+                    <p>Sandwich jambon-fromage + compote + jus de fruit</p>
+                </div>
+            </div>
+            
+            <div id="adulte" class="menu-content">
+                <div class="menu-item">
+                    <h4>Salade Côtière <span>14€</span></h4>
+                    <p>Salade, crevettes, avocat, mangue et vinaigrette passion</p>
+                </div>
+                
+                <div class="menu-item">
+                    <h4>Poulet Grillée <span>16€</span></h4>
+                    <p>Filet de poulet mariné, riz basmati et légumes de saison</p>
+                </div>
+            </div>
+            
+            <div id="snack" class="menu-content">
+                <div class="menu-item">
+                    <h4>Burger Aquatique <span>10€</span></h4>
+                    <p>Pain brioché, steak 150g, cheddar, oignons confits</p>
+                </div>
+                
+                <div class="menu-item">
+                    <h4>Wrap Tropical <span>9€</span></h4>
+                    <p>Galette de blé, poulet, ananas, sauce mango</p>
+                </div>
+            </div>
+            
+            <div id="boisson" class="menu-content">
+                <div class="menu-item">
+                    <h4>Jus Frais Pressé <span>4€</span></h4>
+                    <p>Orange, ananas ou pamplemousse</p>
+                </div>
+                
+                <div class="menu-item">
+                    <h4>Cocktail Sans Alcool <span>6€</span></h4>
+                    <p>Mojito tropical ou Sunrise</p>
+                </div>
+            </div>
+    
+            <!-- Réservation Section -->
+            <section class="reservation-section">
+                <div class="container">
+                    <h2 class="section-title">Réservation</h2>
+                    <div class="reservation-form">
+                        <div class="form-group">
+                            <label for="name">Nom complet</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="date">Date et heure</label>
+                            <input type="datetime-local" id="date" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="guests">Nombre de personnes</label>
+                            <select id="guests" required>
+                                <option value="1">1 personne</option>
+                                <option value="2">2 personnes</option>
+                                <option value="3">3 personnes</option>
+                                <option value="4">4 personnes</option>
+                                <option value="5">5+ personnes</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="notes">Demandes spéciales</label>
+                            <textarea id="notes" rows="3"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">Réserver une table</button>
+                    </div>
+                </div>
+            </section>
+    
+            <!-- Gallerie Section -->
+            <h2 class="section-title">Nos Plats Phares</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');" onclick="openModal(this)"></div>
+                <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');" onclick="openModal(this)"></div>
+                <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');" onclick="openModal(this)"></div>
+                <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1482049016688-2d3e1b311543?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');" onclick="openModal(this)"></div>
+            </div>
+    
+            <!-- Infos Pratiques -->
+            <h2 class="section-title">Informations Pratiques</h2>
+            <div class="info-cards">
+                <div class="info-card">
+                    <h4>⏱ Horaires</h4>
+                    <p>11h-15h / 18h-22h<br>Service continu le week-end</p>
+                </div>
+                
+                <div class="info-card">
+                    <h4>📍 Emplacement</h4>
+                    <p>Face au lagon tropical<br>Zone restaurant du complexe</p>
+                </div>
+                
+                <div class="info-card">
+                    <h4>📞 Contact</h4>
+                    <p>+221 77 123 45 67<br>restaurant@aquacomplexe.com</p>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Modal pour la gallerie -->
+        <div id="galleryModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal" onclick="closeModal()">&times;</span>
+                <img id="modalImg" class="modal-img" src="" alt="">
+            </div>
+        </div>
+    
+        
+        </main>
+        <footer>
+          <div class="container">
+              <div class="footer-grid">
+                  <div class="footer-col">
+                      <h3>Complexe Aquatique d'Attinguie</h3>
+                      <p>Le complexe aquatique d'Attinguie, offrant des attractions pour toute la famille depuis 2024.</p>
+                      <div class="social-links">
+                          <a href="#"><i class="fab fa-facebook"></i></a>
+                          <a href="#"><i class="fab fa-instagram"></i></a>
+                          <a href="#"><i class="fab fa-tripadvisor"></i></a>
+                      </div>
+                  </div>
+                  <div class="footer-col">
+                      <h3>Liens rapides</h3>
+                      <ul class="footer-links">
+                          <li><a href="#">Horaires & Tarifs</a></li>
+                          <li><a href="regles.html">Règlement intérieur</a></li>
+                          <li><a href="#">FAQ</a></li>
+                          <li><a href="restau.html">Restaurant</a></li>
+                          <li><a href="reser.html">Reservation</a></li>
+                      </ul>
+                  </div>
+                  <div class="footer-col">
+                      <h3>Contact</h3>
+                      <ul class="footer-links">
+                          <li><i class="fas fa-map-marker-alt"></i> Attinguie, Côte d'Ivoire</li>
+                          <li><i class="fas fa-phone"></i> +225 0752248521</li>
+                          <li><i class="fas fa-envelope"></i> contact@compaquaattinguie.com</li>
+                      </ul>
+                  </div>
+                  <div class="footer-col">
+                      <h3>Newsletter</h3>
+                      <p>Abonnez-vous pour recevoir nos offres spéciales</p>
+                      <form>
+                          <input type="email" placeholder="Votre email" style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 5px; border: none;">
+                          <button type="submit" class="btn" style="width: 100%;">S'abonner</button>
+                      </form>
+                  </div>
+              </div>
+              <div class="copyright">
+                  <p>&copy; 2025 Complexe Aquatique d'Attinguie. Tous droits réservés.</p>
+              </div>
+          </div>
+      </footer>
+        <script src="restau.js"></script>
+</body>
+</html>

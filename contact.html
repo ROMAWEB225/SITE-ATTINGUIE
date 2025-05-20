@@ -4,35 +4,204 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="contact.css">
 </head>
 <body>
     <header class="site-header">
-        <div class="header-logo">
-            <div class="logo">
-            <a href="#" class="logo"><img src="IMAGES PISCINE/logo.jpg" alt="logo"></a> 
-            </div>
-            <div class="reservation">
-              <button class="btn-reser">RESERVATION</button>
-              <div class="reser">
-                  <ul class="reser-lien">
-                      <li><a href="">Log in</a></li>
-                       <li><a href="">Sign up</a></li>
-                       <li><a href="">Commentaire</a></li>
-                       <li><a href="">Infos</a></li>
-                  </ul>
-               </div>
-            </div>
+    <nav class="nav-gle">
+
+        <div class="nav-logo">
+          <img src="IMAGES PISCINE/logo.jpg" alt="logo site">
         </div>
-        <nav class="barre-nav">
-       
-            <ul class="nav-lien">
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="galerie.html">GALERIE</a></li>
-                <li><a href="attract.html">ATTRACTIONS</a></li>
-                <li><a href="news.html">NEWS</a></li>
-                <li><a href="contact.html">CONTACTS</a></li>
-            </ul>
-        </nav>
+  
+        <ul class="nav-liens">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="la piscine.html"> La piscine</a></li>
+          <li><a href="activités.html">Activités</a></li>
+          <li><a href="restau.html">Restaurant</a></li>
+          <li><a href="reser.html">Réservation</a></li>
+          <li><a href="contact.html" class="contact">Contact</a></li>
+        </ul>
+  
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+  
+        <div class="nav-recherche">
+          <input type="text" placeholder="Rechercher...">
+          <button type="submit">🔍</button>
+        </div>
+  
+      </nav>
         
     </header>
+    <main>
+      <section class="contact-hero">
+        <div class="hero-content container">
+            <h1>Contactez-nous</h1>
+            <p>Une question, une réservation ou un feedback ? Nous sommes à votre écoute</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <!-- Contact Methods -->
+        <div class="contact-grid">
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fas fa-phone-alt"></i>
+                </div>
+                <h3>Téléphone</h3>
+                <p>Pour les réservations et informations :</p>
+                <p><strong>+221 77 123 45 67</strong></p>
+                <p style="margin-top: 15px;">Service client :</p>
+                <p><strong>+221 70 987 65 43</strong></p>
+            </div>
+            
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <h3>Email</h3>
+                <p>Réservations :</p>
+                <p><strong>reservations@aquasplash.com</strong></p>
+                <p style="margin-top: 15px;">Événements :</p>
+                <p><strong>evenements@aquasplash.com</strong></p>
+            </div>
+            
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <h3>Horaires</h3>
+                <p><strong>Lundi - Vendredi :</strong> 8h - 19h</p>
+                <p><strong>Samedi :</strong> 9h - 20h</p>
+                <p><strong>Dimanche :</strong> 9h - 18h</p>
+                <p style="margin-top: 10px;"><em>Ouvert tous les jours en haute saison</em></p>
+            </div>
+        </div>
+
+        <!-- Formulaire de Contact -->
+        <div class="contact-form">
+            <h2 class="form-title">Envoyez-nous un message</h2>
+            <form id="contactForm">
+                <div class="form-grid">
+                    <div class="form-group required">
+                        <label for="name">Nom complet</label>
+                        <input type="text" id="name" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group required">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" class="form-control" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">Sujet</label>
+                    <select id="subject" class="form-control">
+                        <option value="question">Question générale</option>
+                        <option value="reservation">Réservation</option>
+                        <option value="group">Groupe/Événement</option>
+                        <option value="feedback">Feedback/Suggestion</option>
+                        <option value="other">Autre</option>
+                    </select>
+                </div>
+                
+                <div class="form-group required">
+                    <label for="message">Message</label>
+                    <textarea id="message" class="form-control" required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Envoyer le message</button>
+            </form>
+        </div>
+
+        <!-- Carte -->
+        <h2 style="text-align: center; margin-bottom: 20px; color: var(--primary);">Notre emplacement</h2>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.146758296057!2d-17.45668268471745!3d14.692189778019592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTTCsDQxJzMxLjkiTiAxN8KwMjcnMTkuOSJX!5e0!3m2!1sfr!2ssn!4v1620000000000!5m2!1sfr!2ssn" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
+        <!-- FAQ -->
+        <div class="faq-section">
+            <h2 style="text-align: center; margin-bottom: 30px; color: var(--primary);">Questions fréquentes</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">Quels sont les modes de paiement acceptés ?</div>
+                <div class="faq-answer">
+                    <p>Nous acceptons les cartes bancaires (Visa, Mastercard), les paiements mobiles (Orange Money, Wave) ainsi que les espèces. Les chèques ne sont pas acceptés.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Puis-je annuler ou modifier ma réservation ?</div>
+                <div class="faq-answer">
+                    <p>Les annulations sont possibles jusqu'à 48h avant la date de réservation pour un remboursement complet. Entre 48h et 24h avant, des frais de 30% seront appliqués. Aucun remboursement n'est possible moins de 24h avant.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Quels équipements dois-je apporter ?</div>
+                <div class="faq-answer">
+                    <p>Nous recommandons d'apporter : maillot de bain, serviette, crème solaire et sandales antidérapantes. Des casiers sont disponibles sur place pour ranger vos affaires.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Y a-t-il des restrictions pour les enfants ?</div>
+                <div class="faq-answer">
+                    <p>Les enfants de moins de 12 ans doivent être accompagnés d'un adulte. Certaines attractions ont des restrictions de taille (minimum 1m20 pour les toboggans extrêmes). Une zone spéciale est dédiée aux tout-petits.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </main>
+    <footer>
+      <div class="container">
+          <div class="footer-grid">
+              <div class="footer-col">
+                  <h3>Complexe Aquatique d'Attinguie</h3>
+                  <p>Le complexe aquatique d'Attinguie, offrant des attractions pour toute la famille depuis 2024.</p>
+                  <div class="social-links">
+                      <a href="#"><i class="fab fa-facebook"></i></a>
+                      <a href="#"><i class="fab fa-instagram"></i></a>
+                      <a href="#"><i class="fab fa-tripadvisor"></i></a>
+                  </div>
+              </div>
+              <div class="footer-col">
+                  <h3>Liens rapides</h3>
+                  <ul class="footer-links">
+                      <li><a href="#">Horaires & Tarifs</a></li>
+                      <li><a href="regles.html">Règlement intérieur</a></li>
+                      <li><a href="#">FAQ</a></li>
+                      <li><a href="restau.html">Restaurant</a></li>
+                      <li><a href="reser.html">Reservation</a></li>
+                  </ul>
+              </div>
+              <div class="footer-col">
+                  <h3>Contact</h3>
+                  <ul class="footer-links">
+                      <li><i class="fas fa-map-marker-alt"></i> Attinguie, Côte d'Ivoire</li>
+                      <li><i class="fas fa-phone"></i> +225 0752248521</li>
+                      <li><i class="fas fa-envelope"></i> contact@compaquaattinguie.com</li>
+                  </ul>
+              </div>
+              <div class="footer-col">
+                  <h3>Newsletter</h3>
+                  <p>Abonnez-vous pour recevoir nos offres spéciales</p>
+                  <form>
+                      <input type="email" placeholder="Votre email" style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 5px; border: none;">
+                      <button type="submit" class="btn" style="width: 100%;">S'abonner</button>
+                  </form>
+              </div>
+          </div>
+          <div class="copyright">
+              <p>&copy; 2025 Complexe Aquatique d'Attinguie. Tous droits réservés.</p>
+          </div>
+      </div>
+  </footer>
+  <script src="contact.js"></script>       
+</body>
+</html>

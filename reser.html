@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="reser.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="nav-gle">
+    
+          <div class="nav-logo">
+            <img src="IMAGES PISCINE/logo.jpg" alt="logo site">
+          </div>
+    
+          <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
+    
+          <div class="nav-content">
+          <ul class="nav-liens">
+            <li><a href="index.html" class="index">Accueil</a></li>
+            <li><a href="la piscine.html"> Piscine</a></li>
+            <li><a href="activités.html">Activités</a></li>
+            <li><a href="restau.html">Restaurant</a></li>
+            <li><a href="reser.html" class="reser">Réservation</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+     
+          <div class="nav-recherche">
+            <input type="text" placeholder="Rechercher...">
+            <button type="submit">🔍</button>
+          </div>
+        </div>  
+    
+        </nav>
+        </header>
+    <main>
+      <section class="reservation-hero">
+        <div class="hero-content container">
+            <h1>Réservez votre journée aquatique</h1>
+            <p>Billets en ligne - Accès rapide - Meilleur prix garanti</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <!-- Steps Indicator -->
+        <div class="reservation-steps">
+            <div class="step completed" id="step1">
+                <div class="step-number">1</div>
+                <div class="step-connector"></div>
+                <span class="step-label">Choix des billets</span>
+            </div>
+            <div class="step active" id="step2">
+                <div class="step-number">2</div>
+                <div class="step-connector"></div>
+                <span class="step-label">Informations personnelles</span>
+            </div>
+            <div class="step" id="step3">
+                <div class="step-number">3</div>
+                <div class="step-connector"></div>
+                <span class="step-label">Paiement</span>
+            </div>
+            <div class="step" id="step4">
+                <div class="step-number">4</div>
+                <div class="step-connector"></div>
+                <span class="step-label">Confirmation</span>
+            </div>
+        </div>
+
+        <!-- Form Sections -->
+        <form id="reservationForm" class="reservation-form">
+            <!-- Step 1: Ticket Selection -->
+            <div class="form-section active" id="ticketSection">
+                <h2 class="form-title">Choix des billets</h2>
+                
+                <div class="form-group">
+                    <label for="visitDate">Date de visite</label>
+                    <div class="datepicker-container">
+                        <input type="date" id="visitDate" class="form-control" required min="">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Type de visite</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="visitType" value="journee" checked> Journée complète
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="visitType" value="demi-journee"> Demi-journée
+                        </label>
+                    </div>
+                </div>
+                
+                <h3 style="margin: 25px 0 15px; color: var(--primary);">Billets</h3>
+                
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="adultTickets">Adultes (12+ ans)</label>
+                        <select id="adultTickets" class="form-control">
+                            <option value="0">0</option>
+                            <option value="1" selected>1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5+</option>
+                        </select>
+                        <p style="margin-top: 5px; font-size: 0.9rem;">Prix : 5 000 FCFA</p>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="childTickets">Enfants (3-11 ans)</label>
+                        <select id="childTickets" class="form-control">
+                            <option value="0" selected>0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                        <p style="margin-top: 5px; font-size: 0.9rem;">Prix : 3 500 FCFA</p>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="babyTickets">Bébés (0-2 ans)</label>
+                        <select id="babyTickets" class="form-control">
+                            <option value="0" selected>0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
+                        <p style="margin-top: 5px; font-size: 0.9rem;">Gratuit</p>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="promoCode">Code promotionnel (optionnel)</label>
+                    <input type="text" id="promoCode" class="form-control">
+                </div>
+                
+                <div class="btn-group">
+                    <button type="button" class="btn btn-outline" disabled>
+                        <i class="fas fa-arrow-left"></i> Précédent
+                    </button>
+                    <button type="button" class="btn btn-primary" onclick="nextStep('ticketSection', 'infoSection')">
+                        Suivant <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Step 2: Personal Information -->
+            <div class="form-section" id="infoSection">
+                <h2 class="form-title">Informations personnelles</h2>
+                
+                <div class="form-grid">
+                    <div class="form-group required">
+                        <label for="firstName">Prénom</label>
+                        <input type="text" id="firstName" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group required">
+                        <label for="lastName">Nom</label>
+                        <input type="text" id="lastName" class="form-control" required>
+                    </div>
+                </div>
+                
+                <div class="form-grid">
+                    <div class="form-group required">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group required">
+                        <label for="phone">Téléphone</label>
+                        <input type="tel" id="phone" class="form-control" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="specialRequests">Demandes spéciales (optionnel)</label>
+                    <textarea id="specialRequests" class="form-control" rows="3"></textarea>
+                </div>
+                
+                <div class="reservation-summary">
+                    <h4 style="margin-bottom: 15px; color: var(--primary);">Résumé de votre réservation</h4>
+                    <div class="summary-item">
+                        <span>2 Adultes</span>
+                        <span>10 000 FCFA</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>1 Enfant</span>
+                        <span>3 500 FCFA</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Frais de service</span>
+                        <span>500 FCFA</span>
+                    </div>
+                    <div class="summary-total">
+                        <span>Total</span>
+                        <span>14 000 FCFA</span>
+                    </div>
+                </div>
+                
+                <div class="btn-group">
+                    <button type="button" class="btn btn-outline" onclick="prevStep('infoSection', 'ticketSection')">
+                        <i class="fas fa-arrow-left"></i> Précédent
+                    </button>
+                    <button type="button" class="btn btn-primary" onclick="nextStep('infoSection', 'paymentSection')">
+                        Paiement <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Step 3: Payment -->
+            <div class="form-section" id="paymentSection">
+                <h2 class="form-title">Paiement sécurisé</h2>
+                
+                <div class="form-group">
+                    <label>Méthode de paiement</label>
+                    <div class="radio-group" style="flex-direction: column; gap: 10px;">
+                        <label class="radio-option">
+                            <input type="radio" name="paymentMethod" value="card" checked> 
+                            <i class="fab fa-cc-visa"></i> <i class="fab fa-cc-mastercard"></i> Carte bancaire
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="paymentMethod" value="mobile"> 
+                            <i class="fas fa-mobile-alt"></i> Paiement mobile (Orange Money, Wave...)
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="paymentMethod" value="onsite"> 
+                            <i class="fas fa-money-bill-wave"></i> Paiement sur place
+                        </label>
+                    </div>
+                </div>
+                
+                <div id="cardPayment">
+                    <div class="form-grid">
+                        <div class="form-group required">
+                            <label for="cardNumber">Numéro de carte</label>
+                            <input type="text" id="cardNumber" class="form-control" placeholder="1234 5678 9012 3456">
+                        </div>
+                        
+                        <div class="form-group required">
+                            <label for="cardName">Nom sur la carte</label>
+                            <input type="text" id="cardName" class="form-control">
+                        </div>
+                    </div>
+                    
+                    <div class="form-grid">
+                        <div class="form-group required">
+                            <label for="expiryDate">Date d'expiration</label>
+                            <input type="text" id="expiryDate" class="form-control" placeholder="MM/AA">
+                        </div>
+                        
+                        <div class="form-group required">
+                            <label for="cvv">CVV</label>
+                            <input type="text" id="cvv" class="form-control" placeholder="123">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="radio-option">
+                        <input type="checkbox" id="termsAgreement" required>
+                        J'accepte les <a href="#" style="color: var(--primary);">conditions générales</a> et la politique de confidentialité
+                    </label>
+                </div>
+                
+                <div class="btn-group">
+                    <button type="button" class="btn btn-outline" onclick="prevStep('paymentSection', 'infoSection')">
+                        <i class="fas fa-arrow-left"></i> Précédent
+                    </button>
+                    <button type="submit" class="btn btn-primary">
+                        Confirmer et payer <i class="fas fa-lock"></i>
+                    </button>
+                </div>
+            </div>
+        </form>
+        
+        <!-- Step 4: Confirmation (hidden by default) -->
+        <div class="form-section" id="confirmationSection" style="display: none;">
+            <div class="confirmation">
+                <div class="confirmation-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h2>Réservation confirmée !</h2>
+                <p>Votre numéro de réservation est : <strong>AQ2023-5874</strong></p>
+                <p>Un email de confirmation a été envoyé à <strong id="confEmail">example@email.com</strong></p>
+                <p style="margin-top: 30px;">
+                    <button class="btn btn-primary" onclick="window.print()">
+                        <i class="fas fa-print"></i> Imprimer le billet
+                    </button>
+                    <button class="btn btn-outline" onclick="window.location.href='index.html'">
+                        <i class="fas fa-home"></i> Retour à l'accueil
+                    </button>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    </main>
+    <footer>
+      <div class="container">
+          <div class="footer-grid">
+              <div class="footer-col">
+                  <h3>Complexe Aquatique d'Attinguie</h3>
+                  <p>Le complexe aquatique d'Attinguie, offrant des attractions pour toute la famille depuis 2024.</p>
+                  <div class="social-links">
+                      <a href="#"><i class="fab fa-facebook"></i></a>
+                      <a href="#"><i class="fab fa-instagram"></i></a>
+                      <a href="#"><i class="fab fa-tripadvisor"></i></a>
+                  </div>
+              </div>
+              <div class="footer-col">
+                  <h3>Liens rapides</h3>
+                  <ul class="footer-links">
+                      <li><a href="#">Horaires & Tarifs</a></li>
+                      <li><a href="regles.html">Règlement intérieur</a></li>
+                      <li><a href="#">FAQ</a></li>
+                      <li><a href="restau.html">Restaurant</a></li>
+                      <li><a href="reser.html">Reservation</a></li>
+                  </ul>
+              </div>
+              <div class="footer-col">
+                  <h3>Contact</h3>
+                  <ul class="footer-links">
+                      <li><i class="fas fa-map-marker-alt"></i> Attinguie, Côte d'Ivoire</li>
+                      <li><i class="fas fa-phone"></i> +225 0752248521</li>
+                      <li><i class="fas fa-envelope"></i> contact@compaquaattinguie.com</li>
+                  </ul>
+              </div>
+              <div class="footer-col">
+                  <h3>Newsletter</h3>
+                  <p>Abonnez-vous pour recevoir nos offres spéciales</p>
+                  <form>
+                      <input type="email" placeholder="Votre email" style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 5px; border: none;">
+                      <button type="submit" class="btn" style="width: 100%;">S'abonner</button>
+                  </form>
+              </div>
+          </div>
+          <div class="copyright">
+              <p>&copy; 2025 Complexe Aquatique d'Attinguie. Tous droits réservés.</p>
+          </div>
+      </div>
+  </footer>
+    <script src="reser.js"></script>
+</body>
+</html>

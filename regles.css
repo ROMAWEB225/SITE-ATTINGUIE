@@ -1,0 +1,279 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+   
+}
+main{
+    margin-top: 80px;
+}
+.header-contenu{
+    margin-top: 60px; /* Pour éviter que le contenu ne soit caché par la navbar fixe */
+}
+.header-contenu {
+    z-index: 2; /* Place le contenu au-dessus de la vidéo */
+    background-color: rgba(0, 0, 0, 0.5); /*Fond semi-transparent */
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.header-contenu h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.header-contenu p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    background-color: #ffd166;
+    color: #000;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #f4a261;
+}
+
+/* Barre de navigation */
+.nav-gle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 1rem 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; 
+   
+}
+main{
+    padding: 2rem;
+}
+.nav-logo img{
+    height:60px;
+    width: 60px;
+}
+.nav-liens {
+    display: flex;
+    list-style: none;
+}
+
+.nav-liens li {
+    margin-left: 1.5rem;
+}
+
+.nav-liens a {
+    color:white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-liens a:hover {
+    background-color:rgba(0, 0, 0, 0.5);
+}
+.nav-recherche {
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;
+}
+
+.nav-recherche input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.nav-recherche button {
+    padding: 0.5rem 1rem;
+    background-color: #ffd166;
+    border: none;
+    border-radius: 4px;
+    margin-left: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.nav-recherche button:hover {
+    background-color: #f4a261;
+}
+/* Menu burger (responsive) */
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px;
+    transition: all 0.3s ease;
+}
+.regles{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+.regles-img img{
+    width: 600px;
+    height: 410px;
+}
+.regles-restric h1{
+    text-align: center;
+    padding: 25px 50px;
+    
+}
+.card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background-color:#ccc;
+    margin-top: 50px;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  .card-container h1{
+    text-align: center;
+    font-size: 2rem;
+    
+  }
+  .card-special{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 180px;
+    border: 1px solid #ddd;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    padding: 10px 20px;
+    color: #000;
+  }
+  
+  .card:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  }
+  
+  .card img {
+    width: 90px;
+    height: 90px;
+  }
+  
+  .card-content {
+    padding: 35px;
+  }
+  
+  .card-content h3 {
+    margin-top: 0;
+  }
+  
+  .learn-more {
+    display: inline;
+    margin-top: 10px;
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .learn-more:hover {
+    text-decoration: underline;
+  }
+  
+  .expandable-content {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 15px;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    background-color:#ddd;
+    color:black;
+  }
+  
+  .expandable-content.active {
+    max-height: 700px; /* Ajustez selon votre contenu */
+    padding: 25px;
+  }
+/* Footer */
+footer {
+    background-color:black;
+    color: white;
+    padding: 50px  20px;
+   
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.footer-col h3 {
+    color: var(--accent);
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #ddd;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--accent);
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--accent);
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}

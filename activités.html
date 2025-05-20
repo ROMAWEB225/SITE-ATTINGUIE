@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="activités.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="nav-gle">
+    
+          <div class="nav-logo">
+            <img src="IMAGES PISCINE/logo.jpg" alt="logo site">
+          </div>
+    
+          <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
+    
+          <div class="nav-content">
+          <ul class="nav-liens">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="la piscine.html" > La piscine</a></li>
+            <li><a href="activités.html" class="activités">Activités</a></li>
+            <li><a href="restau.html">Restaurant</a></li>
+            <li><a href="reser.html">Réservation</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+     
+          <div class="nav-recherche">
+            <input type="text" placeholder="Rechercher...">
+            <button type="submit">🔍</button>
+          </div>
+        </div>  
+    
+        </nav>
+    </header>
+        <main>
+          <section class="hero">
+            <div class="hero-content">
+                <h1>Nos Activités Aquatiques</h1>
+                <div class="search-bar">
+                    <input type="text" placeholder="Rechercher une activité...">
+                    <select>
+                        <option>Tous les âges</option>
+                        <option>Moins de 5 ans</option>
+                        <option>6-12 ans</option>
+                        <option>13+ ans</option>
+                    </select>
+                    <button>Go</button>
+                </div>
+            </div>
+        </section>
+    
+        <div class="container">
+            <!-- Activités Principales -->
+            <h2 class="section-title">Nos Attractions Phares</h2>
+            <div class="activities-grid">
+                <!-- Activité 1 -->
+                <div class="activity-card">
+                    <div class="activity-img" style="background-image: url('https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                    <div class="activity-content">
+                        <h3>Toboggans Extrêmes</h3>
+                        <div class="activity-meta">
+                            <span>🚀 Vitesse élevée</span>
+                            <span class="age-badge">12+ ans</span>
+                        </div>
+                        <p>Défiez "Le Tornade" (120m à 60km/h) et "Le Serpent", notre toboggan noir avec effets lumineux.</p>
+                    </div>
+                </div>
+                
+                <!-- Activité 2 -->
+                <div class="activity-card">
+                    <div class="activity-img" style="background-image: url('https://images.unsplash.com/photo-1506929562872-bb421503ef21?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                    <div class="activity-content">
+                        <h3>Piscine à Vagues</h3>
+                        <div class="activity-meta">
+                            <span>🌊 Vagues programmées</span>
+                            <span class="age-badge">Tous âges</span>
+                        </div>
+                        <p>Profitez de nos vagues toutes les heures (10h, 15h, 18h) dans notre bassin de 0.5m à 2m de profondeur.</p>
+                    </div>
+                </div>
+                
+                <!-- Activité 3 -->
+                <div class="activity-card">
+                    <div class="activity-img" style="background-image: url('https://images.unsplash.com/photo-1540206276207-3af25c08abc4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                    <div class="activity-content">
+                        <h3>Espace Bien-être</h3>
+                        <div class="activity-meta">
+                            <span>🧖‍♀️ Détente</span>
+                            <span class="age-badge">16+ ans</span>
+                        </div>
+                        <p>Jacuzzis extérieurs (36°C), hammam aux huiles essentielles et sauna avec vue panoramique.</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Zones Thématiques -->
+            <h2 class="section-title">Nos Zones Thématiques</h2>
+            <div class="zones-container">
+                <div class="zone-card" style="background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+                    <h3>Le Lagon Tropical</h3>
+                    <p>Eau à 28°C • Plage de sable fin • Cocktails sans alcool</p>
+                    <a href="#" class="cta-button">Voir les photos</a>
+                </div>
+                
+                <div class="zone-card" style="background-image: url('https://images.unsplash.com/photo-1575429192334-f18ac6c19d7f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+                    <h3>Rivière Paresseuse</h3>
+                    <p>700m de parcours • Bouées géantes • Paysages tropicaux</p>
+                    <a href="#" class="cta-button">Voir les photos</a>
+                </div>
+                
+                <div class="zone-card" style="background-image: url('https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+                    <h3>Zone Sportive</h3>
+                    <p>Aquabike • Aquagym • Cours de natation</p>
+                    <a href="#" class="cta-button">Voir les photos</a>
+                </div>
+            </div>
+    
+            <!-- Programme Quotidien -->
+            <section class="schedule">
+                <div class="container">
+                    <h2 class="section-title">Programme du Jour</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Heure</th>
+                                <th>Activité</th>
+                                <th>Lieu</th>
+                                <th>Âge</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>10h30</td>
+                                <td>Aqua Zumba</td>
+                                <td>Bassin principal</td>
+                                <td>12+ ans</td>
+                            </tr>
+                            <tr>
+                                <td>14h00</td>
+                                <td>Cours de plongée</td>
+                                <td>Piscine profonde</td>
+                                <td>8+ ans</td>
+                            </tr>
+                            <tr>
+                                <td>16h30</td>
+                                <td>Animation enfants</td>
+                                <td>Zone ludique</td>
+                                <td>3-10 ans</td>
+                            </tr>
+                            <tr>
+                                <td>18h00</td>
+                                <td>Aqua Yoga</td>
+                                <td>Bassin calme</td>
+                                <td>16+ ans</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+    
+            <!-- Services -->
+            <h2 class="section-title">Nos Services</h2>
+            <div class="activities-grid">
+                <div class="activity-card">
+                    <div class="activity-content">
+                        <h3>Location de Matériel</h3>
+                        <ul>
+                            <li>Bouées géantes - 500FCFA/h</li>
+                            <li>Casques GoPro - 1000FCFA/jour</li>
+                            <li>Serviettes - 300FCFA</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="activity-card">
+                    <div class="activity-content">
+                        <h3>Packages Spéciaux</h3>
+                        <ul>
+                            <li>Anniversaire Splash (décorations+gâteau)</li>
+                            <li>Évasion Couple (accès VIP+massages)</li>
+                            <li>Pass Famille (4 personnes)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Témoignages -->
+            <section class="testimonials">
+                <div class="container">
+                    <h2 class="section-title" style="color: white;">Ils ont adoré</h2>
+                    <div class="testimonial-grid">
+                        <div class="testimonial-card">
+                            <img src="IMAGES PISCINE/NTR.jpg" alt="Fatou Diop">
+                            <p>"Nos enfants ont adoré le parcours ludique! Nous reviendrons certainement."</p>
+                            <cite>Romaric Tanoh, Cocody</cite>
+                        </div>
+                        
+                        <div class="testimonial-card">
+                            <img src="IMAGES PISCINE/Mme NTR.jpg" alt="Jean Dupont">
+                            <p>"Le toboggan Tornade est incroyable! Une montée d'adrénaline inoubliable."</p>
+                            <cite> Ange N'Guetta, Abidjan</cite>
+                        </div>
+                        
+                        <div class="testimonial-card">
+                            <img src="IMAGES PISCINE/PRIVAT.jpg" alt="Amina Sow">
+                            <p>"L'espace est un vrai havre de paix. Le personnel est aux petits soins."</p>
+                            <cite>Privat Tahou, Yopougon</cite>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+            <!-- CTA -->
+            <div style="text-align: center; margin: 50px 0;">
+                <h2>Prêt à plonger dans l'aventure ?</h2>
+                <a href="#" class="cta-button">Réserver maintenant</a>
+                <p>Ou contactez-nous sur WhatsApp : <strong>+221 77 123 45 67</strong></p>
+            </div>
+        </div>
+        </main> 
+        <footer>
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <h3>Complexe Aquatique d'Attinguie</h3>
+                        <p>Le complexe aquatique d'Attinguie, offrant des attractions pour toute la famille depuis 2024.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-tripadvisor"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-col">
+                        <h3>Liens rapides</h3>
+                        <ul class="footer-links">
+                            <li><a href="#">Horaires & Tarifs</a></li>
+                            <li><a href="regles.html">Règlement intérieur</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="restau.html">Restaurant</a></li>
+                            <li><a href="reser.html">Reservation</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h3>Contact</h3>
+                        <ul class="footer-links">
+                            <li><i class="fas fa-map-marker-alt"></i> Attinguie, Côte d'Ivoire</li>
+                            <li><i class="fas fa-phone"></i> +225 0752248521</li>
+                            <li><i class="fas fa-envelope"></i> contact@compaquaattinguie.com</li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h3>Newsletter</h3>
+                        <p>Abonnez-vous pour recevoir nos offres spéciales</p>
+                        <form>
+                            <input type="email" placeholder="Votre email" style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 5px; border: none;">
+                            <button type="submit" class="btn" style="width: 100%;">S'abonner</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <p>&copy; 2025 Complexe Aquatique d'Attinguie. Tous droits réservés.</p>
+                </div>
+            </div>
+        </footer>
+
+<script src="activités.js"></script>
+</body>
+</html>

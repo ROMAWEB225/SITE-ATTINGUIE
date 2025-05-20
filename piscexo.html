@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="piscexo.css">
+</head>
+<body>
+    <section class="pool-hero">
+        <div class="hero-content container">
+            <h1>Piscine Olympique</h1>
+            <p>50m de longueur • 8 couloirs • Température contrôlée à 26°C</p>
+        </div>
+    </section>
+    
+    <div class="container">
+        <!-- Pool Specifications -->
+        <h2 style="text-align: center; margin: 50px 0 30px; color: var(--secondary);">Caractéristiques techniques</h2>
+        <div class="pool-specs">
+            <div class="spec-card">
+                <div class="spec-icon">
+                    <i class="fas fa-ruler"></i>
+                </div>
+                <h3>Dimensions</h3>
+                <p>50m × 25m</p>
+                <p>Profondeur : 1.2m à 3m</p>
+            </div>
+            <div class="spec-card">
+                <div class="spec-icon">
+                    <i class="fas fa-water"></i>
+                </div>
+                <h3>Traitement de l'eau</h3>
+                <p>Système de filtration UV</p>
+                <p>Chlore : 1.5ppm (norme internationale)</p>
+            </div>
+            <div class="spec-card">
+                <div class="spec-icon">
+                    <i class="fas fa-thermometer-half"></i>
+                </div>
+                <h3>Température</h3>
+                <p>Maintenue à 26°C toute l'année</p>
+                <p>Système de chauffage solaire</p>
+            </div>
+            <div class="spec-card">
+                <div class="spec-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3>Capacité</h3>
+                <p>200 nageurs simultanés</p>
+                <p>8 couloirs de nage</p>
+            </div>
+        </div>
+    
+        <!-- Gallery -->
+        <div class="gallery-section">
+            <h2 style="text-align: center; margin-bottom: 30px; color: var(--secondary);">Galerie photo</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');" onclick="openModal(this)">
+                    <div class="gallery-caption">Vue aérienne de la piscine</div>
+                </div>
+                <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1552674605-db6ffd4facb5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');" onclick="openModal(this)">
+                    <div class="gallery-caption">Couloirs de nage</div>
+                </div>
+                <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1438029071396-1e831a7fa6d5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');" onclick="openModal(this)">
+                    <div class="gallery-caption">Système de filtration</div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Features -->
+        <div class="features-section">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 40px; color: var(--secondary);">Équipements disponibles</h2>
+                <div class="features-list">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-swimmer"></i>
+                        </div>
+                        <div>
+                            <h3>Matériel de nage</h3>
+                            <p>Planches, pull-boys, palmes et tubas disponibles gratuitement à l'accueil</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <h3>Horaires aménagés</h3>
+                            <p>Créneaux réservés aux clubs le matin, public l'après-midi et cours particuliers en soirée</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-tachometer-alt"></i>
+                        </div>
+                        <div>
+                            <h3>Chronométrage électronique</h3>
+                            <p>Système de départ automatique et tableau d'affichage des temps pour les compétitions</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-wheelchair"></i>
+                        </div>
+                        <div>
+                            <h3>Accessibilité</h3>
+                            <p>Monte-personne pour accès PMR et vestiaires adaptés</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Safety -->
+        <div class="safety-section">
+            <h2 style="text-align: center; margin-bottom: 40px; color: var(--secondary);">Sécurité et Règlement</h2>
+            <div class="safety-grid">
+                <div class="safety-card">
+                    <h3><i class="fas fa-life-ring"></i> Surveillance</h3>
+                    <p>3 maîtres-nageurs diplômés en permanence pendant les heures d'ouverture. Système de vidéosurveillance avec détection de noyade.</p>
+                </div>
+                <div class="safety-card">
+                    <h3><i class="fas fa-ban"></i> Restrictions</h3>
+                    <p>Interdiction des plongeons hors zones désignées. Les enfants de moins de 12 ans doivent être accompagnés. Shorts de bain interdits (slips ou maillots une pièce requis).</p>
+                </div>
+                <div class="safety-card">
+                    <h3><i class="fas fa-shower"></i> Hygiène</h3>
+                    <p>Douche savonnée obligatoire avant l'accès au bassin. Port du bonnet de bain exigé pour tous les nageurs.</p>
+                </div>
+            </div>
+        </div>
+    
+        <!-- CTA -->
+        <div class="pool-cta">
+            <h2 style="margin-bottom: 20px;">Prêt à plonger ?</h2>
+            <p style="margin-bottom: 25px; font-size: 1.1rem;">Consultez nos horaires et tarifs spéciaux pour les nageurs réguliers</p>
+            <a href="#" style="background: var(--accent); color: white; padding: 12px 30px; border-radius: 5px; text-decoration: none; font-weight: 500;">Voir les horaires</a>
+        </div>
+    </div>
+    
+    <!-- Modal -->
+    <div id="galleryModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <img id="modalImage" src="" alt="" style="max-width: 100%; max-height: 80vh;">
+        </div>
+    </div>
+<script src="piscexo.js"></script>     
+</body>
+</html>
